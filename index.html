@@ -3,7 +3,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
-<link href="style.css" rel="stylesheet">
+<link href="web/style.css" rel="stylesheet">
 <title>Detection of Deepfake Environmental Audio</title>
 </head>
 <body>
@@ -56,16 +56,36 @@ and implausible background noise.
       <thead>
       <tr class="text-center">
           <td>Sound cue</td>
-          <td>Cue 1</td>
-          <td>Cue 2</td>
+          <td>Sound example</td>
       </tr>
       </thead>
       <tbody>
       <tr>
-          <td class="desc">Sound example</td>
+          <td class="desc">Cue 1</td>
           <td class="text-center"><audio controls class="sample_audio"><source src="web/audio/cue1.wav" type="audio/wav"></audio></td>
-          <td class="text-center"><audio controls class="sample_audio"><source src="web/audio/cue2.wav" type="audio/wav"></audio></td>
-             </tr>
+      </tr>
+    </tbody>
+</table>
 </div>
+
+<script>
+    function setupCallback(elem, elems) {
+      elem.addEventListener("play", function () {
+        for (var other of elems) {
+          if (other !== elem) {
+            other.pause();
+            // other.currentTime = 0.;
+          }
+        }
+      });
+    }
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.body.getElementsByTagName("audio");
+      for (var elem of elems) {
+        setupCallback(elem, elems);
+      }
+    });
+    </script>
 </body>
 </html>
