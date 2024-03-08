@@ -123,6 +123,7 @@ h1 {
   border-style: solid;
   border-color: #729ea5;
   text-align:left;
+  
 }
 .tftable tr {
   background-color:#ffffff;
@@ -133,6 +134,7 @@ h1 {
   border-style: solid;
   border-color: #729ea5;
   font-size: 16px;
+  
 }
 .tftable tr:hover {
   background-color:#ffff99;
@@ -179,4 +181,16 @@ b {
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
+}
+img {
+  width: 100%;
+  height: auto;
+  
+}
+audio{
+  width:100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%; 
 }
