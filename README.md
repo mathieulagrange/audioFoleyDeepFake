@@ -3,11 +3,35 @@
 ## Overview
 AudioFoleyDeepFake is a research project dedicated to the detection of deepfake environmental audio. The project utilizes the power of CLAP audio embeddings to efficiently and accurately discern synthesized environmental sounds from real ones. This repository contains the code and documentation for the detection pipeline developed as part of our research.
 
-## Research Paper
+## Introduction
 
 This project is based on the research paper titled "Detection of Deepfake Environmental Audio," authored by Hafsa Ouajdi, Oussama Hadder, Modan Tailleur, Mathieu Lagrange, and Laurie M. Heller. The paper introduces a novel approach for detecting fake environmental sounds with a primary focus on Foley sound synthesis. Through extensive research and experimentation, the team developed a detection pipeline leveraging CLAP audio embeddings, which proved to be highly effective in distinguishing between real and synthetic environmental sounds. The proposed method achieved an impressive detection accuracy of 98%, highlighting its potential in combating the challenges posed by deepfake audio technologies.
 
-The findings of this research are going to be presented at the European Signal Processing Conference (EUSIPCO) 2024, showcasing the significant advancements in the field of audio deepfake detection. 
+The findings of this research are going to be presented at the European Signal Processing Conference (EUSIPCO) 2024.
+
+This repository contains the code and documentation for our project on detecting deepfake environmental audio, presented as Python scripts and Jupyter notebooks. The project is structured around key tasks that represent the stages of developing and deploying a deepfake audio detection system:
+
+1. [Data Loader](deepfakeClassifiers/data_loader.py)
+   - Prepares the training, evaluation, and validation loaders.
+   - Ensures that data is correctly formatted and partitioned for the deep learning model.
+
+2. [Classifier](deepfakeClassifiers/models)
+   - Defines the architecture of deep learning classifiers used in the experiments.
+   - Includes implementations for various neural network architectures tailored for audio deepfake detection.
+
+3. [Hparams](deepfakeClassifiers/hparams.py)
+   - Manages parameters handling for the experiments.
+   - Allows for easy adjustment and optimization of hyperparameters to enhance model performance.
+
+4. [Utilities](deepfakeClassifiers/utils.py)
+   - Provides classes and functions to train the classifier on embeddings and predict outputs.
+
+5. [examples](deepfakeClassifiers/examples/)
+   - Contains Jupyter notebooks with examples to train the model, compute the inference time, and analyze predictions' results.
+   - Demonstrates best practices and methodological insights gained from our research.
+
+
+For a more detailed overview of each component and to understand how they integrate to form a complete detection pipeline, please explore the source files and notebooks provided in this repository.
 
 
 ## Installation
@@ -18,7 +42,7 @@ To set up the project environment, follow these steps:
 ```
 git clone https://github.com/mathieulagrange/audioFoleyDeepFake.git
 ``` 
-2. **Installing PyTorch**
+2. **Installing CUDA**
 
 CUDA depends on the actual gpu of your machine, if you are willing to use the GPU in the presented experiments and want to install cuda, we recommend visiting the [PyTorch official website](https://pytorch.org/) and [Cuda Installation Guide](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) and following the instructions there to install the version of CUDA that matches your system's GPU.
 
