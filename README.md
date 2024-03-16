@@ -20,12 +20,10 @@ git clone https://github.com/mathieulagrange/audioFoleyDeepFake.git
 ``` 
 2. **Installing PyTorch**
 
-PyTorch requires a specific installation depending on your system's CUDA version. We recommend visiting the [PyTorch official website](https://pytorch.org/) and following the instructions there to install the version of PyTorch that matches your system's CUDA version.
+CUDA depends on the actual gpu of your machine, if you are willing to use the GPU in the presented experiments and want to install cuda, we recommend visiting the [PyTorch official website](https://pytorch.org/) and [Cuda Installation Guide](https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html) and following the instructions there to install the version of CUDA that matches your system's GPU.
 
-For example, to install PyTorch with CUDA 12.1 (), you would run:
-```bash
-pip install torch==2.1.1+cu121
-```
+For instance, we performed all our experiments in NVIDIA GeForce RTX 3060 GPU. Therefore the CUDA version installed was 12.4.
+
 3. **Install Dependencies**
 Navigate to the project directory and install the required Python packages:
 ```
