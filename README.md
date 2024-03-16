@@ -49,9 +49,14 @@ CUDA depends on the actual gpu of your machine, if you are willing to use the GP
 For instance, we performed all our experiments in NVIDIA GeForce RTX 3060 GPU. Therefore the CUDA version installed was 12.4.
 
 3. **Install Dependencies**
+
 Navigate to the project directory and install the required Python packages:
 ```
 pip install -r requirements.txt
 ``` 
+
+## Dataset
+
+The detection model was evaluated using audio data from the 2023 DCASE challenge task 7 on Foley sound synthesis, which includes over 6 hours of recorded audio and 28 hours of generated audio. The non-fake audio files and the generated audio files from the DCASE 2023 Challenge can be downloaded from [this website](https://zenodo.org/records/8091972)
 
 
