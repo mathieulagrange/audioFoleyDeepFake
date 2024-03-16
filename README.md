@@ -13,11 +13,10 @@ This repository contains the code and documentation for our project on detecting
 
 1. [Data Loader](deepfakeClassifiers/data_loader.py)
    - Prepares the training, evaluation, and validation loaders.
-   - Ensures that data is correctly formatted and partitioned for the deep learning model.
+   - Ensures that data is correctly formatted and partitioned for the training, validation and evaluation steps.
 
 2. [Classifier](deepfakeClassifiers/models)
    - Defines the architecture of deep learning classifiers used in the experiments.
-   - Includes implementations for various neural network architectures tailored for audio deepfake detection.
 
 3. [Hparams](deepfakeClassifiers/hparams.py)
    - Manages parameters handling for the experiments.
