@@ -59,3 +59,16 @@ pip install -r requirements.txt
 The detection model was evaluated using audio data from the 2023 DCASE challenge task 7 on Foley sound synthesis, which includes over 6 hours of recorded audio and 28 hours of generated audio. The non-fake audio files and the generated audio files from the DCASE 2023 Challenge can be downloaded from [this website](https://zenodo.org/records/8091972)
 
 
+## Results and Discussion
+
+The detailed results of our experiments are thoroughly discussed in our paper. We achieved high accuracy with the CLAP-2023 method and a Multilayer Perceptron (MLP) model, showing an evaluation and validation accuracy of 98%.
+
+For our "Discussion" section, we selected specific audio examples that are available on [the companion page](./index.html). These selections were made using the embeddings from the CLAP-2023 method and the aforementioned MLP model. The strategy for choosing these sounds was based on their likelihood scores:
+
+- For the False Positive (FP) category, we selected fake sounds that the model incorrectly identified with high confidence.
+- For the False Negative (FN) category, we chose fake sounds that the model failed to identify, indicated by low likelihood scores.
+
+These examples, accessible on the companion page, provide valuable insights into the model's performance and highlight areas for potential improvement in future research.
+
+
+
