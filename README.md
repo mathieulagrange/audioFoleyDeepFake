@@ -68,7 +68,7 @@ For our "Discussion" section, we selected specific audio examples that are avail
 - For the False Positive (FP) category, we selected fake sounds that the model incorrectly identified with high confidence.
 - For the False Negative (FN) category, we chose fake sounds that the model failed to identify, indicated by low likelihood scores.
 
-These examples, accessible on the companion page, provide valuable insights into the model's performance and highlight areas for potential improvement in future research.
+For the most curious, some of these examples are available on the companion page.
 
 
 
