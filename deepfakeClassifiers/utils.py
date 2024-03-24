@@ -206,6 +206,7 @@ class ModelTrainer:
     #     return stop
 
 
+
     def train(self,train_loader,valid_loader,timer_starter,timer_ender,timings,name_model = str, checkpoint_path = './model_checkpoints'):
         """
         Trains the model using the specified training and validation loaders, with optional GPU timing. It saves the model checkpoint in the specified directory path.
@@ -236,7 +237,7 @@ class ModelTrainer:
                 torch.save(self.model, save_path)
                 print(f"Model saved to {save_path}")
 
-        self.append_results_json(self.early_stop)
+        
         total_time = np.sum(self.timings)
         
         print(f"Total time of training is {total_time/1000} s and Time per epoch is : {total_time / ((self.epochs[-1] + 1) * 1000)} s/epoch")
